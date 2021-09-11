@@ -1,6 +1,6 @@
 tasks:
   - init: npm install -g gatsby-cli
-    command: gatsby --version
+    command: npm install
 
 ports:
   - port: 8000
