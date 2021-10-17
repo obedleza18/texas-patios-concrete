@@ -7,12 +7,13 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
+import Header from "./header"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <header>This is the header</header>
-      <main>This is the main content</main>
+      <Header />
+      {children}
       <footer>This is the footer</footer>
     </>
   )
