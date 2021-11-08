@@ -11,8 +11,9 @@ const Gallery = () => {
 						<div className="grid">
 							<figure className="effect-apollo">
 								<a href="page/concrete.html">
-									<StaticImage src="../images/concrete16.jpg" alt="" />
+								<StaticImage src="../images/concrete16.jpg" alt="" />
 									<figcaption>
+										
 										<h3>Concrete</h3>
 									</figcaption>	
 								</a>

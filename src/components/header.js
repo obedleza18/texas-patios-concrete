@@ -32,12 +32,12 @@ const Header = () => {
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <nav className="linkEffects linkHoverEffect_12">
                   <ul>
-                    <li><a href="index.html" className="scroll"><span>Home</span></a></li>
+                    <li><a href="/" className="scroll"><span>Home</span></a></li>
                     <li><a href="#about" className="scroll"><span>About Us</span></a></li>
                     <li><a href="#products" className="scroll"><span>Our Product</span></a></li>
                     <li><a href="#gallery" className="scroll"><span>Services</span></a></li>
                     <li><a href="#team" className="scroll"><span>Design</span></a></li>
-                    <li><a href="page/bull-outdoor.html"><span>Grills and Appliances</span></a></li>
+                    <li><a href="page-2"><span>Grills and Appliances</span></a></li>
                     <li><a href="page/contact.html"><span>Contact Us</span></a></li>
                   </ul>
                 </nav>

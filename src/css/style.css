@@ -427,6 +427,7 @@ p.counter {
 .about-info .gatsby-image-wrapper {
     float: left;
     width: 50%;
+	display: inline !important;
 }
 .about-info2 {
     float: right;
@@ -782,7 +783,7 @@ p.counter {
 	cursor: pointer;
 }
 .grid figure img {
-	position: relative;
+	position: absolute;
 	display: block;
 	width: 100%;
 	opacity: 0.8;
