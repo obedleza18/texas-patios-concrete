@@ -1,8 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
+import Background1 from "./background1"
 
-const Header = () => {
+
+function Header(props){
   return (
     <div className="header">
       <div className="agile-top-header">
@@ -33,12 +35,9 @@ const Header = () => {
                 <nav className="linkEffects linkHoverEffect_12">
                   <ul>
                     <li><a href="/" className="scroll"><span>Home</span></a></li>
-                    <li><a href="#about" className="scroll"><span>About Us</span></a></li>
-                    <li><a href="#products" className="scroll"><span>Our Product</span></a></li>
-                    <li><a href="#gallery" className="scroll"><span>Services</span></a></li>
-                    <li><a href="#team" className="scroll"><span>Design</span></a></li>
+                    <li><a href="ServicePage" className="scroll"><span>Services</span></a></li>
                     <li><a href="page-2"><span>Grills and Appliances</span></a></li>
-                    <li><a href="page/contact.html"><span>Contact Us</span></a></li>
+                    <li><a href="ContactPage"><span>Contact Us</span></a></li>
                   </ul>
                 </nav>
               </div>
@@ -48,44 +47,7 @@ const Header = () => {
           <div className="clearfix"></div>
         </div>
       </div>
-      <div className="slider">
-        <ul className="rslides" id="slider">
-          <li>
-            <StaticImage src="../images/bg1.jpg" alt="" />
-            <div className="slider-info">
-              <h4>Outdoor <span>Living Dreams</span></h4>
-              <h6><span>Your Neighbor</span> won't belive it</h6>
-            </div>
-          </li>
-          <li>
-            <StaticImage src="../images/bg2.jpg" alt="" />
-            <div className="slider-info">
-              <h4>Outdoor <span>Living Dreams</span></h4>
-              <h6><span>Your Neighbor</span> won't belive it</h6>
-            </div>
-          </li>
-          <li>
-            <StaticImage src="../images/bg3.jpg" alt="" />
-            <div className="slider-info">
-              <h4>Outdoor <span>Living Dreams</span></h4>
-              <h6><span>Your Neighbor</span> won't belive it</h6>
-            </div>
-          </li>
-          <li>
-            <StaticImage src="../images/bg4.jpg" alt="" />
-            <div className="slider-info">
-              <h4>Outdoor <span>Living Dreams</span></h4>
-              <h6><span>Your Neighbor</span> won't belive it</h6>
-            </div>
-          </li>
-        </ul>
-        <ul id="slider3-pager" className="rslides_tabs rslides1_tabs">
-          <li><a href="#"><StaticImage src="../images/bg1_s.jpg" alt="" /></a></li>
-          <li><a href="#"><StaticImage src="../images/bg2_s.jpg" alt="" /></a></li>
-          <li><a href="#"><StaticImage src="../images/bg3_s.jpg" alt="" /></a></li>
-          <li><a href="#"><StaticImage src="../images/bg4_s.jpg" alt="" /></a></li>
-        </ul>
-      </div>
+      <Background1 />
     </div>
   )
 }
