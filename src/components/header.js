@@ -2,6 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 import Background1 from "./background1"
+import { Link } from "gatsby"
 
 
 function Header(props){
@@ -34,10 +35,10 @@ function Header(props){
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <nav className="linkEffects linkHoverEffect_12">
                   <ul>
-                    <li><a href="/" className="scroll"><span>Home</span></a></li>
-                    <li><a href="ServicePage" className="scroll"><span>Services</span></a></li>
-                    <li><a href="page-2"><span>Grills and Appliances</span></a></li>
-                    <li><a href="ContactPage"><span>Contact Us</span></a></li>
+                    <li><Link to="/" className="scroll"><span>Home</span></Link></li>
+                    <li><Link to="/ServicePage" className="scroll"><span>Services</span></Link></li>
+                    <li><Link to="/page-2"><span>Grills and Appliances</span></Link></li>
+                    <li><Link to="/ContactPage"><span>Contact Us</span></Link></li>
                   </ul>
                 </nav>
               </div>
