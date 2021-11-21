@@ -2,23 +2,16 @@ import React, {useState} from "react"
 import { mapPagesSlides } from "./data"
 
 const Background1 = () => {
-
   const [activeIndex, setActiveIndex] = useState(0)
 
   // Render the slides
-  const renderSlides = (slides) => {
-    return slides && slides.map((slide, index) => {
-
-      // Do something with the activeIndex state
-      console.log(activeIndex);
-
-      return (
-        <li key={index}>
-          {slide.image}
-          {slide.text}
-        </li>
-      )
-    })
+  const renderSlide = (slide) => {
+    return (
+      <li>
+        {slide.image}
+        {slide.text}
+      </li>
+    )
   }
 
   const handleSelectorClick = (index) => {
@@ -43,7 +36,7 @@ const Background1 = () => {
   return (
     <div className="slider">
       <ul className="rslides" id="slider">
-        {renderSlides(mapPagesSlides[path])}
+        {renderSlide(mapPagesSlides[path][activeIndex])}
       </ul>
       <ul id="slider3-pager" className="rslides_tabs rslides1_tabs">
         {renderSlectors(mapPagesSlides[path])}
