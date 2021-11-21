@@ -67,23 +67,25 @@ h1 {
   color: #fff;
   font-weight: bold;
   }
-#slider3-pager a {
+#slider3-pager button {
   display: inline-block;
+  background-color: transparent;
+  border-radius: 50px;
 }
 #slider3-pager img {
   float: left;
   display:block;
 }
-#slider3-pager .rslides_here a {
+#slider3-pager .rslides_here button {
     background: transparent;
     border: 2px solid #efbe0c;
 }
-#slider3-pager a {
+#slider3-pager button {
     padding: 4px;
 }
 /*-- responsive-mediaqueries --*/
 @media (max-width:768px){
-	#slider3-pager a {
+	#slider3-pager button {
 		width: 13%;
 	}
 	.rslides_tabs {
@@ -91,7 +93,7 @@ h1 {
 	}
 }
 @media (max-width:640px){
-	#slider3-pager a {
+	#slider3-pager button {
 		width: 13%;
 	}
 	.rslides_tabs {
@@ -99,7 +101,7 @@ h1 {
 	}
 }
 @media (max-width:480px){
-	#slider3-pager a {
+	#slider3-pager button {
 		width: 13%;
 	}
 	.rslides_tabs {
@@ -107,7 +109,7 @@ h1 {
 	}
 }
 @media (max-width:320px){
-	#slider3-pager a {
+	#slider3-pager button {
 		width: 15%;
 	}
 	.rslides_tabs {
@@ -367,7 +369,7 @@ label {
 nav.navbar.navbar-default {
     right:  10px;
 }
-ul#slider3-pager li a img {
+ul#slider3-pager li button img {
     border-radius: 50%;
 }
 .slider-info {
@@ -1260,11 +1262,11 @@ figure.effect-apollo:hover p {
 	.slider-info p, .slider-info h6{
 		letter-spacing: 3px;
 	}
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 58px;
 		height: 58px;
 	}
-	#slider3-pager a {
+	#slider3-pager button {
 		padding: 3px;
 	}
 	.rslides_tabs li {
@@ -1442,7 +1444,7 @@ figure.effect-apollo:hover p {
 	.slider-info h6 {
 		font-size: 0.9em;
 	}
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 50px;
 		height: 50px;
 	}
@@ -1474,7 +1476,7 @@ figure.effect-apollo:hover p {
 	.slider-info h4 {
 		font-size: 1.8em;
 	}
-	#slider3-pager a {
+	#slider3-pager button {
 		width: 100%;
 	}
 	p.counter {
@@ -1518,7 +1520,7 @@ figure.effect-apollo:hover p {
 	}
 }
 @media (max-width: 736px){
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 46px;
 		height: 46px;
 	}
@@ -1639,7 +1641,7 @@ figure.effect-apollo:hover p {
 	.slider-info h6 {
 		font-size: 0.8em;
 	}
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 40px;
 		height: 40px;
 	}
@@ -1700,7 +1702,7 @@ figure.effect-apollo:hover p {
 	.top-nav {
 		margin-top: 1px;
 	}
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 38px;
 		height: 38px;
 	}
@@ -1764,7 +1766,7 @@ figure.effect-apollo:hover p {
 	}
 }
 @media (max-width: 568px){
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 37px;
 		height: 37px;
 	}
@@ -1861,7 +1863,7 @@ figure.effect-apollo:hover p {
 	.slider-info p {
 		line-height: 2;
 	}
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 32px;
 		height: 32px;
 	}
@@ -1990,7 +1992,7 @@ figure.effect-apollo:hover p {
 		top: 50%;
 		left: 10%;
 	}
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 28px;
 		height: 28px;
 	}
@@ -2109,7 +2111,7 @@ figure.effect-apollo:hover p {
 	.slider-info {
 		top: 51%;
 	}
-	#slider3-pager a {
+	#slider3-pager button {
 		padding: 2px;
 	}
 	.agile_count_grid_left {
@@ -2164,7 +2166,7 @@ figure.effect-apollo:hover p {
 	.slider-info {
 		top: 49%;
 	}
-	ul#slider3-pager li a img {
+	ul#slider3-pager li button img {
 		width: 24px;
 		height: 24px;
 	}

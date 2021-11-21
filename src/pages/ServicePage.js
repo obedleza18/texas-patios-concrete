@@ -1,5 +1,5 @@
 
-import * as React from "React"
+import * as React from "react"
 import Layout from "../components/layout"
 import Gallery from "../components/gallery"
 import Services from "../components/services"

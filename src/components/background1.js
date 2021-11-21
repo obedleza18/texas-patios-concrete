@@ -1,12 +1,17 @@
-import { StaticImage } from "gatsby-plugin-image"
-import * as React from "react"
+import React, {useState} from "react"
 import { mapPagesSlides } from "./data"
 
 const Background1 = () => {
 
+  const [activeIndex, setActiveIndex] = useState(0)
+
   // Render the slides
   const renderSlides = (slides) => {
     return slides && slides.map((slide, index) => {
+
+      // Do something with the activeIndex state
+      console.log(activeIndex);
+
       return (
         <li key={index}>
           {slide.image}
@@ -16,11 +21,15 @@ const Background1 = () => {
     })
   }
 
+  const handleSelectorClick = (index) => {
+    setActiveIndex(index)
+  }
+
   // Renders the pager
   const renderSlectors = (selectors) => {
     return selectors && selectors.map((selector, index) => {
       return (
-        <li key={index}><a href="#">{selector.mini}</a></li>
+        <li key={index}><button onClick={() => handleSelectorClick(index)}>{selector.mini}</button></li>
       )
     })
   }
