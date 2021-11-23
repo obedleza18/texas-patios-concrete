@@ -4,8 +4,27 @@ import { mapPagesSlides } from "./data"
 const Background1 = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
+  // Gets the path for the front end rendering
+  let path = '/'
+  if (typeof window !== "undefined") {
+    path = window.location.pathname
+  }
+
+  const handleSelectorClick = (index) => {
+    setActiveIndex(index)
+  }
+
   // Render the slides
-  const renderSlide = (slide) => {
+  const renderSlide = () => {
+    let slide
+    if (typeof mapPagesSlides[path] !== 'undefined' &&
+        typeof mapPagesSlides[path][activeIndex] !== 'undefined') {
+      slide = mapPagesSlides[path][activeIndex]
+    }
+    else {
+      slide = mapPagesSlides['/'][activeIndex]
+    }
+
     return (
       <li>
         {slide.image}
@@ -14,32 +33,32 @@ const Background1 = () => {
     )
   }
 
-  const handleSelectorClick = (index) => {
-    setActiveIndex(index)
-  }
-
   // Renders the pager
-  const renderSlectors = (selectors) => {
-    return selectors && selectors.map((selector, index) => {
+  const renderSelectors = () => {
+    let selectors
+    if (typeof mapPagesSlides[path] !== 'undefined') {
+      selectors = mapPagesSlides[path]
+    }
+    else {
+      selectors = mapPagesSlides['/']
+    }
+
+    return selectors.map((selector, index) => {
       return (
-        <li key={index}><button onClick={() => handleSelectorClick(index)}>{selector.mini}</button></li>
+        <li key={index} className={activeIndex === index ? 'rslides_here' : ''}>
+          <button onClick={() => handleSelectorClick(index)}>{selector.mini}</button>
+        </li>
       )
     })
-  }
-
-  // Gets the path for the front end rendering
-  let path = '/'
-  if (typeof window !== "undefined") {
-    path = window.location.pathname
   }
 
   return (
     <div className="slider">
       <ul className="rslides" id="slider">
-        {renderSlide(mapPagesSlides[path][activeIndex])}
+        {renderSlide()}
       </ul>
       <ul id="slider3-pager" className="rslides_tabs rslides1_tabs">
-        {renderSlectors(mapPagesSlides[path])}
+        {renderSelectors()}
       </ul>
     </div>
   )

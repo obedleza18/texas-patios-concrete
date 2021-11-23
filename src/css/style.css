@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6{
 h1 {
     margin: 0px !important;
 }
-.rslides_tabs a {
+.rslides_tabs button {
     border: 2px solid #fff;
     border-radius: 50%;
 }
