@@ -11,7 +11,8 @@ const mainHeaderText = (
 )
 
 export const mapPagesSlides = {
-  '/': [
+  '/':
+  [
     {
       'image': <StaticImage src="../images/bg1.jpg" alt="Slide 1" />,
       'mini': <StaticImage src="../images/bg1_s.jpg" alt="Selector 1" />,

@@ -1,0 +1,29 @@
+/**
+ * Get the percentage difference between two given strings.
+ * @param  {string} strA    The first string to be compared
+ * @param  {string} strB    The second string to be compared
+ * @return {float}          The percentage difference between the two strings
+ */
+function getTextDifferencePercentage(strA, strB) {
+    if (typeof strA != 'string' || typeof strB != 'string') {
+        throw 'Both parameters must be strings';
+    }
+    if (strA.length == 0 && strB.length == 0) {
+        return 0;
+    }
+
+    var largeStr = strA.length >= strB.length ? strA : strB;
+    var smallStr = largeStr == strA ? strB : strA;
+    // Determine Levenshtein distance between each string
+    var row1 = [], row2 = [], result;
+    for (var i = 0; i < largeStr.length + 1; i++) row1[i] = i;
+    for (var i = 0; i < largeStr.length; i++) {
+        row2[0] = i + 1;
+        for (var j = 0; j < smallStr.length; j++) {
+            row2[j + 1] = Math.min(row2[j] + 1, row1[j + 1] + 1, row1[j] + (largeStr[i] != smallStr[j]));
+        }
+        for (var j = 0; j < row1.length; j++) row1[j] = row2[j];
+    }
+    // The percentage difference of the two strings
+    return (1 - (largeStr.length - row2[smallStr.length]) / largeStr.length);
+}

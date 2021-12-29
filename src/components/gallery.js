@@ -10,7 +10,7 @@ const Gallery = () => {
 					<div className="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
 						<div className="grid">
 							<figure className="effect-apollo">
-								<a href="page/concrete.html">
+								<a href="Services\Concrete\ConcretePage">
 								<StaticImage src="../images/concrete16.jpg" alt="" />
 									<figcaption>
 										

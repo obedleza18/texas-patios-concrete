@@ -1,0 +1,83 @@
+
+
+function create_simple_modal(type, id, title, contents, footer_contents, callback, callback_param){
+
+	$(".modal").remove();
+	$(".modal-backdrop").remove();
+
+	var fade_div = $("<div/>");
+	fade_div.addClass("modal").addClass("venngage-modal").addClass("fade").attr("id", id);
+
+	var dialog_div = $("<div/>");
+	dialog_div.addClass("modal-dialog").addClass(type);
+
+	var content_div = $("<div/>");
+	content_div.addClass("modal-content");
+
+	var header_div = $("<div/>");
+	header_div.addClass("modal-header");
+
+	var close_button = $("<button/>");
+	close_button.addClass("close").addClass("close-modal").attr({"type":"button"}).html("&times;");
+
+	var title_div = $("<h4/>")
+	title_div.addClass("modal-title").html(title);
+
+	var modal_body = $("<div/>");
+	modal_body.addClass("modal-body");
+
+	var modal_footer = $("<div/>");
+	modal_footer.addClass("modal-footer");
+
+	var close_button2 = $("<button/>");
+	close_button2 .addClass("btn").addClass("btn-gray").addClass("btn-sm").addClass("close-modal").attr({"type":"button"}).html("Close");
+
+	if (window.__vg_translator) {
+		close_button2.html(window.__vg_translator.t('editor.misc.close'));
+	}
+
+	header_div.html(close_button).append(title_div);
+
+	//adding the actual content.
+	modal_body.html(contents);
+
+	modal_footer.html(close_button2)
+
+	modal_footer.append(footer_contents)
+
+	content_div.html(header_div).append(modal_body).append(modal_footer);
+	dialog_div.html(content_div);
+	fade_div.html(dialog_div);
+	$("body").append(fade_div);
+
+	if ('enable_smart_diagram_tours' in window && window.enable_smart_diagram_tours && VGEditor.productTours?.isTourDisplayed?.()) {
+		if ($('#chmln')) {
+			$('#chmln').css({ display: 'none' });
+		}
+	}
+
+	$("#" + id + " .close-modal").on("click", function(){
+		$("#" + id).modal("hide");
+        $('body').removeClass('modal-open').css('overflow', '');
+		$("#" + id).remove();
+		$(".modal-backdrop").remove();
+
+		if ($('#chmln')) {
+			$('#chmln').css({ display: '' });
+		}
+	});
+
+
+	if(typeof callback == 'function'){
+
+		//console.log("running callback");
+
+		callback(callback_param);
+
+	}
+
+
+	$("body").css("overflow", "hidden");
+	$("#" + id).modal({backdrop: 'static', keyboard: false});
+
+}

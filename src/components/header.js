@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
-import Background1 from "./background1"
+import Background from "./background"
 import { Link } from "gatsby"
 
 
@@ -48,7 +48,7 @@ function Header(props){
           <div className="clearfix"></div>
         </div>
       </div>
-      <Background1 />
+      <Background />
     </div>
   )
 }
