@@ -1,10 +1,10 @@
 import React, {useState} from "react"
 import { mapPagesSlides } from "./data"
 
-<<<<<<< HEAD:src/components/background.js
-const Background = () => {
-=======
+// <<<<<<< HEAD:src/components/background.js
 const Background1 = () => {
+// =======
+const background = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   // Gets the path for the front end rendering
@@ -16,7 +16,7 @@ const Background1 = () => {
   const handleSelectorClick = (index) => {
     setActiveIndex(index)
   }
->>>>>>> f168afce56191ef07def5ce2bcefc0f383fbae3b:src/components/background1.js
+// >>>>>>> f168afce56191ef07def5ce2bcefc0f383fbae3b:src/components/background.js
 
   // Render the slides
   const renderSlide = () => {
@@ -66,6 +66,6 @@ const Background1 = () => {
       </ul>
     </div>
   )
-}
+}}
 
 export default Background

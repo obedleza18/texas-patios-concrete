@@ -1,11 +1,10 @@
 import * as React from "react"
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 import Background from "./background"
-=======
-import Background1 from "./background1"
->>>>>>> f168afce56191ef07def5ce2bcefc0f383fbae3b
+// =======
+// >>>>>>> f168afce56191ef07def5ce2bcefc0f383fbae3b
 import { Link } from "gatsby"
 
 
