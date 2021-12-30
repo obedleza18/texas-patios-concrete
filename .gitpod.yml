@@ -1,9 +1,21 @@
 tasks:
-  - init: npm install -g gatsby-cli
-    command: npm install
+  - name: Set up dev environment
+    before: |
+      npm install -g gatsby-cli
+      npm install
+    command:
+      gatsby develop
 
 ports:
   - port: 8000
     onOpen: open-preview
-  - port: 8080
-    onOpen: open-preview
+    
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: true
+    addBadge: false

@@ -95,7 +95,7 @@ const Gallery = () => {
 					<div className="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
 						<div className="grid">
 							<figure className="effect-apollo">
-								<a href="">
+								<a href="https://texaspatiosandconcrete/">
 									<StaticImage src="../images/morecomingsoon.jpg" alt="" />
 									<figcaption>
 										<h3>More Coming Soon</h3>

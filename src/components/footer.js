@@ -7,7 +7,7 @@ const Footer = () => {
 		<div className="container">
 			<div className="col-md-4 agileinfo_footer_grid">
 				<h4>Facebook</h4>
-				<iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Texas-Patios-Concrete-1642632669364250/&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1728702850710042" width="300" height="214" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				<iframe title="Facebook Embed" src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Texas-Patios-Concrete-1642632669364250/&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1728702850710042" width="300" height="214" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</div>
 			<div className="col-md-4 agileinfo_footer_grid">
 				<h4>Instagram Posts</h4>
@@ -52,8 +52,8 @@ const Footer = () => {
 				   <h4>Social media</h4>
 				   <div className="social">
 					<ul>
-						<li><a href="https://www.facebook.com/Texas-Patios-Concrete-1642632669364250/" className="link facebook" target="_blank" rel="noreferrer"><span className="fa fa-facebook-square"></span></a></li>
-						<li><a href="https://www.instagram.com/texas_patios_and_concrete/" className="link instagram" target="_blank" rel="noreferrer"><span className="fa fa-instagram"></span></a></li>
+						<li><a href="https://www.facebook.com/Texas-Patios-Concrete-1642632669364250/" className="link facebook" target="_blank" rel="noreferrer"><span className="fa fa-facebook-square" aria-label="Facebook Icon"></span></a></li>
+						<li><a href="https://www.instagram.com/texas_patios_and_concrete/" className="link instagram" target="_blank" rel="noreferrer"><span className="fa fa-instagram" aria-label="Instagram Icon"></span></a></li>
 					</ul>
 				</div>
 					<div className="clearfix"> </div>

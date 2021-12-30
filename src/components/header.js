@@ -1,7 +1,11 @@
 import * as React from "react"
+<<<<<<< HEAD
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 import Background from "./background"
+=======
+import Background1 from "./background1"
+>>>>>>> f168afce56191ef07def5ce2bcefc0f383fbae3b
 import { Link } from "gatsby"
 
 
@@ -15,9 +19,9 @@ function Header(props){
           <div className="top-icons">
             <ul>
               <li><a href="https://www.facebook.com/Texas-Patios-Concrete-1642632669364250/" target="_blank"
-                     className="fa fa-facebook"> </a></li>
+                     className="fa fa-facebook" rel="noreferrer"> </a></li>
               <li><a href="https://www.instagram.com/texas_patios_and_concrete/" target="_blank"
-                     className="fa fa-instagram"> </a></li>
+                     className="fa fa-instagram" rel="noreferrer"> </a></li>
             </ul>
           </div>
           <div className="top-nav">
